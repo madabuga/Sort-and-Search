@@ -27,7 +27,7 @@ public class Sort_and_Search {
 
         //Binary Search:
 
-        int n=17;
+        int n=2;
         int[] secondArray = Array;
         int mid, start=0, end=secondArray.length;
 
@@ -36,21 +36,19 @@ public class Sort_and_Search {
         while( start <= end ){
             mid = (end + start)/2;
 
-            if(secondArray[mid]==n){
+            if(secondArray[mid] == n){
                 System.out.println(n + " found!");
                 break;
-            }else if(secondArray[mid] < n)
-            {
+            }else if(secondArray[mid] < n){
                 start = mid + 1;
-            } else if (secondArray[mid] > n)
-            {
+            } else if (secondArray[mid] > n) {
                 end = mid-1;
-            } else {
-                System.out.println(n + " not found!");
             }
-
         }
 
+        if (start > end) {
+                System.out.println(n + " not found!");
+            }
 
     }
 }
